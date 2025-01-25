@@ -1,0 +1,48 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/colors' as *;
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    margin-top: 2rem;
+
+    .slide-button {
+        width: 2rem;
+        height: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        border-radius: 20px;
+        border: 0;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+            transition: 0.2s linear;
+        }
+    }   
+
+    .left {
+        position: absolute;
+        left: 8%;
+        top: 50%;
+    }
+
+    .right {
+        position: absolute;
+        right: 8%;
+        top: 50%;
+    }
+
+    .slides-wrapper {
+        display: flex;
+        gap: 1.125rem;
+        width: 1270px;
+    }
+}

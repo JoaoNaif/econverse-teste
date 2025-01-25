@@ -1,0 +1,35 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/colors' as *;
+
+.titleProduct-container {
+    width: 71.125rem;
+    height: 2.813rem;
+    margin: 0 auto;
+    margin-bottom: 0.25rem;
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .title {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+
+        padding: 0 1rem;
+        background-color: $white;
+        color: $blue;
+    }
+
+    .title-line {
+        background-color: $gray-border;
+        width: 100%;
+        height: 1px;
+        
+        z-index: 1;
+    }
+
+}

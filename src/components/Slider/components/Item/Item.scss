@@ -1,0 +1,71 @@
+@use '../../../../styles/fonts' as *;
+@use '../../../../styles/colors' as *;
+
+.item-container {
+    width: 25%;
+    height: 31.25rem;
+    padding: 1.031rem 0.809rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px $gray-border;
+
+    display: flex;
+    flex-direction: column;
+
+    .item-photo {
+        width: 17.381rem;
+        height: 14.25rem;
+    }
+
+    .item-name {
+        font-size: 0.938rem;
+        font-weight: 300;
+        margin-top: 1rem;
+    }
+
+    .item-price {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem;
+
+        .item-total {
+            font-size: $medium;
+            color: $gray-light;
+            text-decoration: line-through;
+        }
+
+        .item-discount {
+            font-size: 1.25rem;
+        }
+    }
+
+    .item-installment {
+        font-size: $xs;
+        margin: 0.25rem;
+    }
+
+    .item-freight {
+        font-size: $xs;
+        color: $blue;
+        margin: 0.75rem 0;
+    }
+
+    .item-buy {
+        height: 2.75rem;
+
+        border-radius: 4px;
+        border: 0;
+
+        background-color: $blue;
+        color: $white;
+        font-size: $small;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $purple-light;
+            transition: 0.2s linear;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/colors' as *;
+
+.sale-container {
+    background-image: url('public/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 24.375rem;
+    padding: 0 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .sale-title {
+        color: $white;
+        font-size: 3rem;
+    }
+
+    .sale-subtitle {
+        color: $white;
+        font-size: 2rem;
+
+        .sale-span {
+            color: $yellow;
+        }
+    }
+
+    .sale-button {
+        width: 12.875rem;
+        height: 3.125rem;
+
+        border: 0;
+        border-radius: 5px;
+        padding: 0.438rem 0;
+
+        font-weight: 600;
+        background-color: $yellow;
+        cursor: pointer;
+
+        &:hover {
+            color: $white;
+            transition: 0.3s linear;
+        }
+    }
+}

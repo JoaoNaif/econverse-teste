@@ -1,0 +1,40 @@
+@use '../../../../styles/colors' as *;
+@use '../../../../styles/fonts' as *;
+
+.headerNav-Container {
+    width: 100%;
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 0.625rem 0;
+        box-shadow: 
+            0 -4px 2px -4px rgba(0, 0, 0, 0.2), 
+            -4px 0 6px -6px rgba(0, 0, 0, 0.2), 
+            4px 0 6px -6px rgba(0, 0, 0, 0.2);  
+
+
+        .nav-item {
+            font-size: $xs;
+            color: $gray-light;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .premium {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            .nav-icon {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+
+        .active {
+            color: $purple-light;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@use '../../../../styles/colors' as *;
+@use '../../../../styles/fonts' as *;
+
+.headerContent-Container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+
+    .image-logo {
+        width: 8.688rem;
+    }
+
+    .search-form {
+        width: 39.375rem;
+        position: relative;
+
+        .search-input {
+            width: 100%;
+            height: 3rem;
+            padding: 0.625rem 0;
+            border: 0;
+            border-radius: 10px;
+            padding: 0 1.5rem;
+
+            background-color: #F6F5F2;
+            
+        }
+
+        .search-button {
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translateY(-50%);
+
+
+            border: 0;
+            background-color: transparent;
+
+            .search-icon {
+                width: 1.75rem;
+                height: 1.75rem;
+                color: $gray-light;
+                cursor: pointer;
+
+                &:hover {
+                    color: $purple-light;
+                    transition: 0.3s linear;
+                }
+            }
+        }
+    }
+
+    .options-bar {
+        display: flex;
+        align-items: center;
+        width: 13.5rem;
+        gap: 2rem;
+
+        .option-item {
+            border: 0;
+            background-color: transparent;
+            color: $gray-light;
+
+            .option-icon {
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: $purple-light;
+                    transition: 0.3s linear;
+                }
+            }
+        }
+    }
+}

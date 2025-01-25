@@ -1,0 +1,33 @@
+@use '../../../../styles/fonts' as *;
+@use '../../../../styles/colors' as *;
+
+.subCategory-container {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    
+    height: 2.5rem;
+    border: 1px solid $gray-border;
+
+    .sub-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        font-weight: 700;
+        cursor: pointer;
+        
+        border-left: 1px solid $gray-border;
+    }
+
+    .sub-item:first-child {
+        border-left: none;
+    }
+
+    .active {
+        color: $blue;
+    }
+}
