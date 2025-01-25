@@ -1,5 +1,11 @@
-import { Products } from '../components/Slider/Slider'
 import { api } from '../lib/axios'
+
+export interface Products {
+  productName: string
+  descriptionShort: string
+  photo: string
+  price: number
+}
 
 export interface GetProducts {
   success: boolean
@@ -7,9 +13,7 @@ export interface GetProducts {
 }
 
 export async function getProducts() {
-  const response = await api.get<GetProducts>(
-    '/teste-front-end/junior/tecnologia/lista-produtos/produtos.json',
-  )
+  const response = await api.get<GetProducts>('')
 
-  return response.data
+  return response.data.products
 }

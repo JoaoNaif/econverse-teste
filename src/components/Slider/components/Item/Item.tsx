@@ -1,4 +1,4 @@
-import { Products } from '../../Slider'
+import { Products } from '../../../../api/get-products'
 import { Modal } from '../Modal/Modal'
 
 import './Item.scss'

@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: 'https://app.econverse.com.br',
+  baseURL:
+    '/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json',
   withCredentials: true,
 })

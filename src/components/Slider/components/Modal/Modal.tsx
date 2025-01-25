@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import './Modal.scss'
-import { Products } from '../../Slider'
 import { Minus, Plus, X } from 'lucide-react'
+import { Products } from '../../../../api/get-products'
 
 interface ModalProps {
   item: Products
