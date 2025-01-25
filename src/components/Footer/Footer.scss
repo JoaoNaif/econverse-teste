@@ -1,7 +1,8 @@
 @use '../../styles/fonts' as *;
 @use '../../styles/colors' as *;
 
-.productMain-container {
+.footer-container {
     display: flex;
     flex-direction: column;
+    height: 30.678rem;
 }

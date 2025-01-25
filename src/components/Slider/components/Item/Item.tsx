@@ -1,4 +1,5 @@
 import { Products } from '../../Slider'
+import { Modal } from '../Modal/Modal'
 
 import './Item.scss'
 
@@ -9,7 +10,9 @@ interface ItemProps {
 export function Item({ item }: ItemProps) {
   return (
     <div className="item-container">
-      <img src={item.photo} alt="" className="item-photo" />
+      <figure className="item-figure">
+        <img src={item.photo} alt="" className="item-photo" />
+      </figure>
       <p className="item-name">{item.productName}</p>
       <div className="item-price">
         <span className="item-total">R$ {(item.price * 1.15).toFixed(2)}</span>
@@ -19,7 +22,7 @@ export function Item({ item }: ItemProps) {
         ou 2x de R$ {(item.price / 2).toFixed(2)} sem juros
       </p>
       <span className="item-freight">Frete grátis</span>
-      <button className="item-buy">COMPRAR</button>
+      <Modal item={item} />
     </div>
   )
 }

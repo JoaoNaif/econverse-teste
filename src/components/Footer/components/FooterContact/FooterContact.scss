@@ -1,0 +1,63 @@
+@use '../../../../styles/fonts' as *;
+@use '../../../../styles/colors' as *;
+
+.footerContact-container {
+    height: 10.125rem;
+    padding: 2.625rem 5rem;
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $purple-dark;
+
+    .footer-newsletter {
+        color: $white;
+
+        .footer-title {
+            font-size: 2rem;
+        }
+
+        .footer-description {
+            font-size: $small;
+        }
+    }
+
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .footer-data {
+            display: flex;
+            gap: 0.5rem;
+
+            .footer-input {
+                width: 14.563rem;
+                height: 2.625rem;
+
+                padding: 0 1rem;
+                border: 0;
+                border-radius: 8px;
+            }
+
+            .footer-button {
+                border: 0;
+                border-radius: 8px;
+
+                width: 9.813rem;
+                height: 2.625rem;
+
+                background-color: $yellow;
+                font-weight: 600;
+            }
+        }
+
+        .footer-check {
+            display: flex;
+            gap: 0.5rem;
+            color: $white;
+            font-size: $small;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/colors' as *;
+
+.brands-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 6rem;
+
+    .brand-title {
+        text-align: center;
+        font-size: $large;
+
+        color: $blue;
+    }
+
+    .brand-list {
+        display: flex;
+        justify-content: center;
+        gap: 2.625rem;
+
+        list-style: none;
+
+        .brand-item {
+            width: 13.188rem;
+            height: 13.188rem;
+
+            border-radius: 100%;
+            box-shadow: 0px 6px 10px $gray-border;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+        }
+    }
+}

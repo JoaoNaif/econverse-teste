@@ -30,19 +30,19 @@
 
     .left {
         position: absolute;
-        left: 8%;
+        left: -3%;
         top: 50%;
     }
 
     .right {
         position: absolute;
-        right: 8%;
+        right: -3%;
         top: 50%;
     }
 
     .slides-wrapper {
         display: flex;
         gap: 1.125rem;
-        width: 1270px;
+        width: 100%;
     }
 }

@@ -1,0 +1,166 @@
+@use '../../../../styles/fonts' as *;
+@use '../../../../styles/colors' as *;
+
+.button-modal {
+    height: 2.75rem;
+
+    border-radius: 4px;
+    border: 0;
+
+    background-color: $blue;
+    color: $white;
+    font-size: $small;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: $purple-light;
+        transition: 0.2s linear;
+    }
+}
+
+.modal-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dialog {
+        background-color: $white;
+
+        position: relative;
+        
+        width: 48.063rem;
+        height: 18.704rem;
+        border-radius: 8px;
+
+        display: flex;
+
+        .close {
+            position: absolute;
+            top: 3%;
+            right: 2%;
+
+            width: 1.75rem;
+            height: 1.75rem;
+
+            cursor: pointer;
+        }
+
+        .modal-figure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 40%;
+        }
+
+        .modal-info {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 2rem;
+
+            padding-left: 2rem;
+
+
+            .modal-main {
+                display: flex;
+                flex-direction: column;
+                gap: 1.125rem;
+
+
+                .modal-name {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                }
+
+                .modal-price {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+            }
+
+            .modal-second {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 1.125rem;
+                
+                p {
+                    color: $gray-light;
+                    font-size: 0.625rem;
+                    font-weight: 500;
+                }
+
+                span {
+                    color: $blue;
+                    font-size: 0.688rem;
+                    font-weight: 600;
+                }
+            }
+
+            .modal-buy {
+                display: flex;
+                gap: 0.75rem;
+
+                .modal-quantity {
+                    width: 6.875rem;
+                    height: 2.25rem;
+
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    border: 1px solid $gray-light;
+                    border-radius: 4px;
+                    color: $purple-dark;
+                    font-weight: 500;
+
+                    .modal-icon {
+                        width: 1.269rem;
+                        height: 1.228rem;
+
+                        cursor: pointer;
+                    }
+
+                    .disabled {
+                        color: $gray-light;
+                    }
+                }
+
+                .modal-button {
+                    width: 11.75rem;
+                    height: 2.25rem;
+
+                    border: 0;
+                    border-radius: 6px;
+
+                    background-color: $yellow;
+                    color: $purple-dark;
+                    font-weight: 700;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $gray-dark;
+                        transition: 0.2s linear;
+                    }
+                }
+            }
+        }
+    }
+}

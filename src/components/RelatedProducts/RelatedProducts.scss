@@ -1,0 +1,23 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/colors' as *;
+
+
+.relatedProducts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    .related-all {
+        text-align: center;
+        font-size: 0.938rem;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $blue;
+            transition: 0.2s linear;
+            text-decoration: underline;
+        }
+    }
+}
