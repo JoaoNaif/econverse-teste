@@ -76,13 +76,13 @@
                 width: 9.813rem;
                 height: 2.625rem;
 
+                background-color: $yellow;
+                font-weight: 700;
+
                 @media (max-width: 768px) {
                     width: 8rem;
                     height: 2rem;
                 }
-
-                background-color: $yellow;
-                font-weight: 600;
             }
         }
 

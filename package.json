@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:test": "vite --port 50789 --mode test",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -15,10 +16,13 @@
     "lucide-react": "^0.473.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.83.4"
+    "sass": "^1.83.4",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.50.0",
     "@rocketseat/eslint-config": "^2.2.2",
+    "@types/node": "^22.10.10",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@typescript-eslint/eslint-plugin": "^8.6.0",
@@ -26,7 +30,13 @@
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "msw": "^2.7.0",
     "typescript": "~5.6.2",
     "vite": "^6.0.5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

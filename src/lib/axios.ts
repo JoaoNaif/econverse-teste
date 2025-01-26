@@ -1,7 +1,7 @@
 import axios from 'axios'
+import { env } from '../env'
 
 export const api = axios.create({
-  baseURL:
-    '/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json',
+  baseURL: env.VITE_API_URL,
   withCredentials: true,
 })
