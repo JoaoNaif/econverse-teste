@@ -50,5 +50,5 @@ Antes de iniciar o projeto, certifique-se de ter os seguintes requisitos instala
 
 Após seguir os passos acima, o projeto estará rodando localmente e pronto para ser utilizado.
 
-Se tiver alguma dúvida, consulte a documentação oficial das ferramentas utilizadas.
+Se tiver alguma dúvida, entre em contato com joaonaif@gmail.com.
 
