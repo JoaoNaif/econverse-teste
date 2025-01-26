@@ -11,16 +11,34 @@
 
     background-color: $purple-dark;
 
+    @media (max-width: 1024px) {
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 2.625rem 3rem;
+    }
+
     .footer-newsletter {
         color: $white;
 
         .footer-title {
             font-size: 2rem;
+
+            @media (max-width: 1024px) {
+                font-size: 1rem;
+            }
         }
 
         .footer-description {
             font-size: $small;
+
+            @media (max-width: 1024px) {
+                font-size: $xs;
+            }
         }
+
+        
     }
 
     .footer-form {
@@ -39,6 +57,16 @@
                 padding: 0 1rem;
                 border: 0;
                 border-radius: 8px;
+
+                @media (max-width: 1024px) {
+                    width: 12.563rem;
+                    height: 2.625rem;
+                }
+
+                @media (max-width: 768px) {
+                    width: 8rem;
+                    height: 2rem;
+                }
             }
 
             .footer-button {
@@ -47,6 +75,11 @@
 
                 width: 9.813rem;
                 height: 2.625rem;
+
+                @media (max-width: 768px) {
+                    width: 8rem;
+                    height: 2rem;
+                }
 
                 background-color: $yellow;
                 font-weight: 600;

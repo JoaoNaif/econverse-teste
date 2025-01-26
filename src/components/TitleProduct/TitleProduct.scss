@@ -13,6 +13,20 @@
     align-items: center;
     position: relative;
 
+    @media (max-width: 1024px) {
+        width: 50rem;
+        height: 2.813rem;
+    }
+
+    @media (max-width: 768px) {
+        width: 40rem;
+        height: 2.813rem;
+    }
+
+   
+
+    
+
     .title {
         position: absolute;
         top: 0;
@@ -32,6 +46,8 @@
         height: 1px;
         
         z-index: 1;
+
+        
     }
 
 }

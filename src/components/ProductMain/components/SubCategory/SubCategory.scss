@@ -21,6 +21,10 @@
         cursor: pointer;
         
         border-left: 1px solid $gray-border;
+
+        @media (max-width: 768px) {
+            font-size: $xs;
+        }
     }
 
     .sub-item:first-child {

@@ -17,11 +17,19 @@
     .sale-title {
         color: $white;
         font-size: 3rem;
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+        }
     }
 
     .sale-subtitle {
         color: $white;
         font-size: 2rem;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
 
         .sale-span {
             color: $yellow;

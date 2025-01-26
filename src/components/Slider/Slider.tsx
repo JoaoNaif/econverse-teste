@@ -1,107 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Slider.scss'
 import { Item } from './components/Item/Item'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
-import { getProducts, Products } from '../../api/get-products'
-
-// const products: Products[] = [
-//   {
-//     productName: 'Iphone 11 PRO MAX BRANCO 1',
-//     descriptionShort: 'Iphone 11 PRO MAX BRANCO 1',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 15000,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 1',
-//     descriptionShort: 'IPHONE 13 MINI 1',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 9000,
-//   },
-//   {
-//     productName: 'Iphone 11 PRO MAX BRANCO 2',
-//     descriptionShort: 'Iphone 11 PRO MAX BRANCO 2',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 14990,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 2',
-//     descriptionShort: 'IPHONE 13 MINI 2',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 12000,
-//   },
-//   {
-//     productName: 'Iphone 11 PRO MAX BRANCO 3',
-//     descriptionShort: 'Iphone 11 PRO MAX BRANCO 3',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 4550,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 3',
-//     descriptionShort: 'IPHONE 13 MINI 3',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 38000,
-//   },
-//   {
-//     productName: 'Iphone 11 PRO MAX BRANCO 4',
-//     descriptionShort: 'Iphone 11 PRO MAX BRANCO 4',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 42000,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 4',
-//     descriptionShort: 'IPHONE 13 MINI 4',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 520,
-//   },
-//   {
-//     productName: 'Iphone 11 PRO MAX BRANCO 5',
-//     descriptionShort: 'Iphone 11 PRO MAX BRANCO 5',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 149990,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 5',
-//     descriptionShort: 'IPHONE 13 MINI 5',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 100000,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 5',
-//     descriptionShort: 'IPHONE 13 MINI 5',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 100000,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 5',
-//     descriptionShort: 'IPHONE 13 MINI 5',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 100000,
-//   },
-//   {
-//     productName: 'IPHONE 13 MINI 5',
-//     descriptionShort: 'IPHONE 13 MINI 5',
-//     photo:
-//       'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-//     price: 100000,
-//   },
-// ]
+import { getProducts } from '../../api/get-products'
 
 export function Slider() {
   const [startIndex, setStartIndex] = useState(0)
-  const itemsPerPage = 4
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const itemsPerPage =
+    screenWidth > 1024 ? 4 : screenWidth > 768 ? 3 : screenWidth > 425 ? 2 : 1
 
   const { data: products = [] } = useQuery({
     queryKey: ['products'],
@@ -141,7 +61,7 @@ export function Slider() {
           </button>
         </div>
       ) : (
-        'carregando'
+        'carregando...'
       )}
     </>
   )
