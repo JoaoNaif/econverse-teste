@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Econverse Teste - Guia de Instalação
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requisitos
+Antes de iniciar o projeto, certifique-se de ter os seguintes requisitos instalados em sua máquina:
 
-Currently, two official plugins are available:
+- **Node.js** v22.12.0 ou superior
+- **Git** para clonar o repositório
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalação
 
-## Expanding the ESLint configuration
+1. **Clonar o Repositório**
+   
+   Abra o prompt de comando e execute:
+   
+   ```bash
+   git clone https://github.com/JoaoNaif/econverse-teste
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Instalar as Dependências**
 
-- Configure the top-level `parserOptions` property like this:
+   Acesse a pasta do repositório clonado:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```bash
+   cd econverse-teste
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   Em seguida, instale as dependências do projeto:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Configuração do Ambiente**
+
+   Crie um arquivo `.env.local` na raiz do projeto e adicione a seguinte variável de ambiente:
+
+   ```env
+   VITE_API_URL="/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
+   ```
+
+4. **Executar o Projeto**
+
+   Para iniciar a aplicação em ambiente de desenvolvimento, execute o seguinte comando:
+
+   ```bash
+   npm run dev
+   ```
+
+## Considerações Finais
+
+Após seguir os passos acima, o projeto estará rodando localmente e pronto para ser utilizado.
+
+Se tiver alguma dúvida, consulte a documentação oficial das ferramentas utilizadas.
+
